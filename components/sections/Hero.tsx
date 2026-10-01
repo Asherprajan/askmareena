@@ -33,9 +33,9 @@ export default function Hero() {
 
             {/* Massive Serif Headline */}
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5rem] font-normal tracking-tight text-white leading-[1.06]">
-              Your 360°<br />
-              Business Guide<br />
-              in the UAE.
+              Strategic Clarity<br />
+              for Your<br />
+              UAE Business.
             </h1>
 
             {/* Subheadline */}
