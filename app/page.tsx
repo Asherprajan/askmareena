@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import QuickServicesReference from "@/components/sections/QuickServicesReference";
 import Credibility from "@/components/sections/Credibility";
 import ServicesOverview from "@/components/sections/ServicesOverview";
 import ApproachValue from "@/components/sections/ApproachValue";
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <QuickServicesReference />
       <Credibility />
       <ServicesOverview />
       <ApproachValue />

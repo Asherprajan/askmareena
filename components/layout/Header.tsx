@@ -6,14 +6,12 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
 import MobileNav from "@/components/layout/MobileNav";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -36,7 +34,7 @@ export default function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#FAF8F5]/90 backdrop-blur-md shadow-sm border-b border-[#E8E4DC]/80 py-3.5"
+            ? "bg-[#080A0C]/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl"
             : "bg-transparent py-5"
         }`}
       >
@@ -45,32 +43,27 @@ export default function Header() {
             {/* Brand Logo & Name */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-[#B8976C] rounded-sm"
+              className="flex items-center gap-3.5 group focus-visible:outline-2 focus-visible:outline-white rounded-xs"
               aria-label="Ask Mareena - Home"
             >
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#E8E4DC] bg-white flex items-center justify-center shadow-xs">
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-white/70 bg-black/60 shadow-xs shrink-0">
                 <Image
-                  src="/images/brand/logo-dark.png"
-                  alt="Ask Mareena Emblem"
-                  width={40}
-                  height={40}
-                  className="object-contain p-1"
+                  src="/images/brand/mareena-tessa-thomas.jpg"
+                  alt="Mareena Tessa Thomas"
+                  fill
+                  sizes="40px"
+                  className="object-cover grayscale contrast-125"
                   priority
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#14171A] group-hover:text-[#9E7B4F] transition-colors leading-none">
-                  Ask Mareena
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.14em] text-[#7A8291] font-medium pt-1 hidden sm:block">
-                  UAE Business Consultancy
-                </span>
-              </div>
+              <span className="font-serif text-sm sm:text-base tracking-[0.2em] uppercase font-medium text-white group-hover:text-[#EAE6DF] transition-colors">
+                Ask Mareena
+              </span>
             </Link>
 
             {/* Desktop Navigation Links */}
             <nav
-              className="hidden lg:flex items-center gap-1 xl:gap-2 px-3 py-1.5 rounded-full bg-[#FAF8F5]/70 border border-[#E8E4DC]/60 backdrop-blur-xs"
+              className="hidden md:flex items-center gap-8 text-sm"
               aria-label="Main Navigation"
             >
               {navLinks.map((link) => {
@@ -83,10 +76,10 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 relative ${
+                    className={`transition-colors text-sm font-normal tracking-wide ${
                       isActive
-                        ? "text-[#14171A] font-semibold bg-[#F3EFEA] shadow-2xs"
-                        : "text-[#525866] hover:text-[#14171A] hover:bg-[#F8F4EE]"
+                        ? "text-white font-medium"
+                        : "text-[#9EA6B0] hover:text-white"
                     }`}
                   >
                     {link.label}
@@ -96,24 +89,20 @@ export default function Header() {
             </nav>
 
             {/* Desktop CTA & Mobile Toggle */}
-            <div className="flex items-center gap-3">
-              <div className="hidden sm:block">
-                <Button
-                  href="/contact"
-                  variant="primary"
-                  size="md"
-                  icon={<ArrowRight className="w-3.5 h-3.5" />}
-                  className="shadow-xs hover:shadow-sm"
-                >
-                  Ask Mareena
-                </Button>
-              </div>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/contact"
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-white/35 rounded-xs text-xs uppercase tracking-[0.14em] font-medium text-white hover:bg-white hover:text-[#080A0C] transition-all duration-200"
+              >
+                <span>Ask Mareena</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
 
               {/* Mobile hamburger button */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2 text-[#14171A] hover:bg-[#F3EFEA] rounded-md transition-colors focus-visible:outline-2 focus-visible:outline-[#B8976C]"
+                className="md:hidden p-2 text-white hover:bg-white/10 rounded-xs transition-colors focus-visible:outline-2 focus-visible:outline-white"
                 aria-label="Open mobile navigation menu"
                 aria-expanded={mobileMenuOpen}
               >

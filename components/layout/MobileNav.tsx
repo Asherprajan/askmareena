@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X, ArrowRight } from "lucide-react";
-import Button from "@/components/ui/Button";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -17,12 +16,10 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Close on route change
   useEffect(() => {
     onClose();
   }, [pathname, onClose]);
 
-  // Trap Escape key and prevent background scroll when open
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isOpen) {
@@ -48,14 +45,14 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
 
   return (
     <div
-      className="fixed inset-0 z-50 lg:hidden"
+      className="fixed inset-0 z-50 md:hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Mobile Navigation"
     >
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#14171A]/60 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -63,23 +60,19 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
       {/* Drawer */}
       <div
         ref={drawerRef}
-        className="fixed inset-y-0 right-0 w-full max-w-sm bg-[#FAF8F5] shadow-2xl flex flex-col justify-between p-6 sm:p-8 border-l border-[#E8E4DC] transform transition-transform duration-300 ease-out"
+        className="fixed inset-y-0 right-0 w-full max-w-sm bg-[#0C0F13] shadow-2xl flex flex-col justify-between p-6 sm:p-8 border-l border-white/10 transform transition-transform duration-300 ease-out text-white"
       >
         <div>
           {/* Header */}
-          <div className="flex items-center justify-between pb-6 border-b border-[#E8E4DC]">
-            <Link
-              href="/"
-              onClick={onClose}
-              className="font-serif text-xl tracking-tight font-semibold text-[#14171A]"
-            >
+          <div className="flex items-center justify-between pb-6 border-b border-white/10">
+            <span className="font-serif text-lg tracking-[0.16em] uppercase font-medium text-white">
               Ask Mareena
-            </Link>
+            </span>
             <button
               ref={closeButtonRef}
               type="button"
               onClick={onClose}
-              className="p-2 text-[#525866] hover:text-[#14171A] hover:bg-[#F3EFEA] rounded-md transition-colors"
+              className="p-2 text-[#9EA6B0] hover:text-white hover:bg-white/10 rounded-xs transition-colors"
               aria-label="Close navigation menu"
             >
               <X className="w-6 h-6" />
@@ -99,14 +92,14 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
                   key={link.href}
                   href={link.href}
                   onClick={onClose}
-                  className={`flex items-center justify-between py-3 px-3 rounded-md text-lg font-medium transition-colors ${
+                  className={`flex items-center justify-between py-3 px-3 rounded-xs text-base font-normal tracking-wide transition-colors ${
                     isActive
-                      ? "text-[#14171A] font-semibold bg-[#F3EFEA]"
-                      : "text-[#525866] hover:text-[#14171A] hover:bg-[#F8F4EE]"
+                      ? "text-white font-medium bg-white/10"
+                      : "text-[#9EA6B0] hover:text-white hover:bg-white/5"
                   }`}
                 >
                   <span>{link.label}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#B8976C]" />}
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                 </Link>
               );
             })}
@@ -114,18 +107,17 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
         </div>
 
         {/* Footer in Drawer */}
-        <div className="pt-6 border-t border-[#E8E4DC] space-y-4">
-          <Button
+        <div className="pt-6 border-t border-white/10 space-y-4">
+          <Link
             href="/contact"
-            variant="primary"
-            size="lg"
-            className="w-full shadow-md"
-            icon={<ArrowRight className="w-4 h-4" />}
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-[#EAE6DF] text-[#080A0C] font-semibold text-xs uppercase tracking-wider rounded-xs hover:bg-white transition-colors"
           >
-            Ask Mareena
-          </Button>
+            <span>Ask Mareena</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
 
-          <p className="text-xs text-center text-[#7A8291]">
+          <p className="text-xs text-center text-[#8E99A8]">
             UAE Corporate Structuring & Company Formation
           </p>
         </div>

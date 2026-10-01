@@ -14,38 +14,38 @@ export const metadata = constructMetadata({
 
 export default function TermsPage() {
   return (
-    <article className="py-12 sm:py-20 bg-white">
+    <article className="py-12 sm:py-20 bg-[#080A0C] min-h-screen">
       <Container size="narrow">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-xs text-[#7A8291]">
+          <ol className="flex items-center gap-2 text-xs text-[#8E99A8]">
             <li>
-              <Link href="/" className="hover:text-[#14171A] transition-colors">
+              <Link href="/" className="hover:text-white transition-colors">
                 Home
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-[#B8976C]" />
+              <ChevronRight className="w-3.5 h-3.5 text-white/40" />
             </li>
-            <li className="text-[#14171A] font-medium" aria-current="page">
+            <li className="text-white font-medium" aria-current="page">
               Terms & Disclaimer
             </li>
           </ol>
         </nav>
 
-        <header className="border-b border-[#E8E4DC] pb-8 mb-10 space-y-3">
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#14171A]">
+        <header className="border-b border-white/10 pb-8 mb-10 space-y-3">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white">
             {termsAndDisclaimerContent.title}
           </h1>
-          <p className="text-xs uppercase tracking-wider text-[#7A8291]">
+          <p className="text-xs uppercase tracking-wider text-[#8E99A8]">
             Last Updated: {termsAndDisclaimerContent.lastUpdated}
           </p>
         </header>
 
-        <div className="space-y-10 text-sm sm:text-base text-[#525866] leading-relaxed">
+        <div className="space-y-10 text-sm sm:text-base text-[#C5CCD6] leading-relaxed">
           {termsAndDisclaimerContent.sections.map((section) => (
             <section key={section.title} className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl font-semibold text-[#14171A]">
+              <h2 className="font-serif text-xl sm:text-2xl font-normal text-white">
                 {section.title}
               </h2>
               <p>{section.content}</p>
@@ -53,12 +53,12 @@ export default function TermsPage() {
           ))}
         </div>
 
-        <footer className="mt-14 pt-8 border-t border-[#E8E4DC] text-xs text-[#7A8291]">
+        <footer className="mt-14 pt-8 border-t border-white/10 text-xs text-[#8E99A8]">
           <p>
             For any clarifications regarding these terms or our consulting scope, please{" "}
             <Link
               href="/contact"
-              className="text-[#14171A] underline hover:text-[#B8976C] font-semibold"
+              className="text-white underline hover:text-[#EAE6DF] font-medium"
             >
               reach out via our contact page
             </Link>

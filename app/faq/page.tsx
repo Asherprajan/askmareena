@@ -2,12 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, HelpCircle } from "lucide-react";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import { constructMetadata } from "@/lib/seo/metadata";
 import { generateFAQSchema } from "@/lib/seo/schema";
-import { faqData, FAQItem } from "@/content/faq";
+import { faqData } from "@/content/faq";
 
 export const metadata = constructMetadata({
   title: "Frequently Asked Questions | UAE Business Setup & Advisory | Ask Mareena",
@@ -19,7 +18,6 @@ export const metadata = constructMetadata({
 export default function FAQPage() {
   const faqSchema = generateFAQSchema(faqData);
 
-  // Group by categories
   const categories: ("General" | "Company Formation" | "Structuring & Tax" | "Visas & Residency")[] = [
     "General",
     "Company Formation",
@@ -35,19 +33,18 @@ export default function FAQPage() {
       />
 
       {/* Header */}
-      <section className="pt-10 sm:pt-16 pb-16 sm:pb-24 border-b border-[#E8E4DC] bg-[#FAF8F5]">
+      <section className="pt-10 sm:pt-16 pb-16 sm:pb-24 border-b border-white/10 bg-[#080A0C]">
         <Container size="narrow">
           <div className="space-y-6 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3EFEA] border border-[#E8E4DC] text-xs font-semibold uppercase tracking-wider text-[#9E7B4F]">
-              <HelpCircle className="w-3.5 h-3.5" />
-              <span>Questions & Answers</span>
+            <div className="text-xs uppercase tracking-[0.22em] text-[#9EA6B0] font-medium">
+              Questions & Answers
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#14171A] leading-[1.12]">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.1]">
               Straight answers to your UAE business questions.
             </h1>
 
-            <p className="text-lg sm:text-xl text-[#525866] leading-relaxed font-normal max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#C5CCD6] leading-relaxed font-normal max-w-2xl mx-auto">
               Clear, realistic guidance regarding mainland and free zone setup, corporate tax obligations, DIFC foundations, and residency pathways.
             </p>
           </div>
@@ -55,7 +52,7 @@ export default function FAQPage() {
       </section>
 
       {/* Categorized FAQs */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-[#0C0F13]">
         <Container size="narrow">
           <div className="space-y-16">
             {categories.map((category) => {
@@ -64,9 +61,9 @@ export default function FAQPage() {
 
               return (
                 <div key={category} className="space-y-6">
-                  <div className="flex items-center gap-3 border-b border-[#E8E4DC] pb-3">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#B8976C]" />
-                    <h2 className="font-serif text-2xl font-semibold text-[#14171A]">
+                  <div className="flex items-center gap-3 border-b border-white/10 pb-3">
+                    <span className="w-2 h-2 rounded-full bg-white/70" />
+                    <h2 className="font-serif text-2xl font-normal text-white">
                       {category}
                     </h2>
                   </div>
@@ -78,17 +75,17 @@ export default function FAQPage() {
           </div>
 
           {/* Direct Question Card */}
-          <div className="mt-16 p-8 bg-[#FAF8F5] border border-[#E8E4DC] rounded-sm text-center space-y-4">
-            <h3 className="font-serif text-2xl font-semibold text-[#14171A]">
+          <div className="mt-16 p-8 bg-[#0E1216] border border-white/10 rounded-sm text-center space-y-4 shadow-xl">
+            <h3 className="font-serif text-2xl font-normal text-white">
               Don&apos;t see your specific scenario answered?
             </h3>
-            <p className="text-sm text-[#525866] max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-[#A3ABB5] max-w-xl mx-auto leading-relaxed">
               Every business activity, shareholder profile, and tax residency situation has nuance. Discuss your specific case directly with Mareena.
             </p>
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-[#14171A] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#B8976C] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xs bg-[#EAE6DF] text-[#080A0C] text-xs uppercase tracking-wider font-semibold hover:bg-white transition-colors"
               >
                 <span>Ask Your Question Directly</span>
                 <ArrowRight className="w-4 h-4" />

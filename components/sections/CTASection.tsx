@@ -16,10 +16,10 @@ export default function CTASection({
   primaryCtaText = "Ask Mareena",
 }: CTASectionProps) {
   return (
-    <section className="py-20 sm:py-28 bg-[#121517] text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#080A0C] border-t border-white/10 text-white relative overflow-hidden">
       {/* Subtle background glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#B8976C]/10 blur-[100px] pointer-events-none rounded-full"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-white/5 blur-[120px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
 

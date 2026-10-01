@@ -15,50 +15,36 @@ export default function SectionHeading({
   title,
   description,
   align = "left",
-  theme = "light",
+  theme = "dark",
   className,
 }: SectionHeadingProps) {
-  const isDark = theme === "dark";
+  const isLight = theme === "light";
 
   return (
     <div
       className={cn(
-        "space-y-4 max-w-3xl",
+        "space-y-3.5 max-w-3xl",
         align === "center" && "mx-auto text-center",
         className
       )}
     >
       {eyebrow && (
-        <div className="flex items-center gap-2">
-          {align === "center" && (
-            <span
-              className={cn(
-                "h-[1px] w-6",
-                isDark ? "bg-[#B8976C]/60" : "bg-[#B8976C]"
-              )}
-            />
-          )}
+        <div className={cn("flex items-center gap-2", align === "center" && "justify-center")}>
           <span
             className={cn(
-              "text-xs uppercase tracking-[0.16em] font-semibold",
-              isDark ? "text-[#C5A880]" : "text-[#9E7B4F]"
+              "text-xs uppercase tracking-[0.22em] font-medium",
+              isLight ? "text-[#525866]" : "text-[#9EA6B0]"
             )}
           >
             {eyebrow}
           </span>
-          <span
-            className={cn(
-              "h-[1px] w-6",
-              isDark ? "bg-[#B8976C]/60" : "bg-[#B8976C]"
-            )}
-          />
         </div>
       )}
 
       <h2
         className={cn(
-          "font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.18]",
-          isDark ? "text-white" : "text-[#14171A]"
+          "font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.14]",
+          isLight ? "text-[#14171A]" : "text-white"
         )}
       >
         {title}
@@ -68,7 +54,7 @@ export default function SectionHeading({
         <p
           className={cn(
             "text-base sm:text-lg leading-relaxed font-normal pt-1",
-            isDark ? "text-[#A3ABB5]" : "text-[#525866]"
+            isLight ? "text-[#525866]" : "text-[#A3ABB5]"
           )}
         >
           {description}

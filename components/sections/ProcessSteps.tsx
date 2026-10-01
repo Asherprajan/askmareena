@@ -35,7 +35,7 @@ const steps = [
 
 export default function ProcessSteps() {
   return (
-    <section className="py-20 sm:py-32 bg-[#F3EFEA]/40 border-t border-b border-[#E8E4DC]">
+    <section className="py-20 sm:py-32 bg-[#080A0C] border-t border-b border-white/10">
       <Container>
         <div className="max-w-3xl mb-16">
           <SectionHeading
@@ -49,35 +49,35 @@ export default function ProcessSteps() {
           {steps.map((step, idx) => (
             <div
               key={step.number}
-              className="relative p-6 sm:p-7 bg-white rounded-sm border border-[#E8E4DC] shadow-2xs space-y-4 flex flex-col justify-between"
+              className="relative p-6 sm:p-7 bg-[#0E1216] rounded-sm border border-white/10 space-y-4 flex flex-col justify-between"
             >
               <div className="space-y-3">
-                <div className="flex items-center justify-between border-b border-[#E8E4DC]/60 pb-3">
-                  <span className="font-serif text-3xl font-light text-[#B8976C]">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                  <span className="font-serif text-3xl font-light text-white/50">
                     {step.number}
                   </span>
-                  <span className="text-[11px] uppercase tracking-wider font-semibold text-[#9E7B4F] bg-[#F8F4EE] px-2.5 py-0.5 rounded-full">
+                  <span className="text-[11px] uppercase tracking-wider font-medium text-[#9EA6B0] bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10">
                     {step.phase}
                   </span>
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-[#14171A] leading-snug">
+                <h3 className="font-serif text-lg font-normal text-white leading-snug">
                   {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#525866] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#A3ABB5] leading-relaxed">
                   {step.description}
                 </p>
               </div>
 
-              <div className="pt-3 text-[11px] text-[#7A8291] italic border-t border-[#E8E4DC]/40">
+              <div className="pt-3 text-[11px] text-[#8E99A8] italic border-t border-white/10">
                 Phase {idx + 1} of 4
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 p-4 sm:p-5 bg-white rounded-sm border border-[#E8E4DC] text-center max-w-2xl mx-auto">
-          <p className="text-xs text-[#7A8291] leading-relaxed">
-            <span className="font-semibold text-[#14171A]">Please note:</span> Processing timeframes and requirements are determined by competent UAE government authorities and vary by activity, jurisdiction, and clearances.
+        <div className="mt-12 p-4 sm:p-5 bg-[#0E1216] rounded-sm border border-white/10 text-center max-w-2xl mx-auto">
+          <p className="text-xs text-[#8E99A8] leading-relaxed">
+            <span className="font-medium text-white">Please note:</span> Processing timeframes and requirements are determined by competent UAE government authorities and vary by activity, jurisdiction, and clearances.
           </p>
         </div>
       </Container>

@@ -32,7 +32,7 @@ const values = [
 
 export default function ApproachValue() {
   return (
-    <section className="py-20 sm:py-28 bg-[#FAF8F5] border-t border-[#E8E4DC]">
+    <section className="py-20 sm:py-28 bg-[#0C0F13] border-t border-white/10">
       <Container>
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <SectionHeading
@@ -43,21 +43,21 @@ export default function ApproachValue() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {values.map((v) => {
             const Icon = v.icon;
             return (
               <div
                 key={v.title}
-                className="space-y-4 p-6 bg-white rounded-sm border border-[#E8E4DC] shadow-2xs hover:border-[#B8976C] transition-colors"
+                className="space-y-4 p-6 sm:p-7 bg-[#101419] rounded-sm border border-white/10 hover:border-white/25 transition-colors"
               >
-                <div className="w-10 h-10 rounded-sm bg-[#F8F4EE] border border-[#E8E4DC] flex items-center justify-center text-[#9E7B4F]">
-                  <Icon className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xs bg-white/5 border border-white/15 flex items-center justify-center text-white">
+                  <Icon className="w-5 h-5 stroke-[1.5]" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-[#14171A]">
+                <h3 className="font-serif text-xl font-normal text-white">
                   {v.title}
                 </h3>
-                <p className="text-sm text-[#525866] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#A3ABB5] leading-relaxed">
                   {v.description}
                 </p>
               </div>

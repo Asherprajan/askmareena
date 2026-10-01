@@ -7,11 +7,10 @@ import Accordion from "@/components/ui/Accordion";
 import { faqData } from "@/content/faq";
 
 export default function HomeFAQPreview() {
-  // Select top representative questions for the homepage
   const previewFaqs = faqData.slice(0, 5);
 
   return (
-    <section className="py-20 sm:py-32">
+    <section className="py-20 sm:py-32 bg-[#0C0F13] border-t border-white/10">
       <Container size="narrow">
         <div className="space-y-4 text-center mb-12 sm:mb-16">
           <SectionHeading
@@ -27,7 +26,7 @@ export default function HomeFAQPreview() {
         <div className="mt-12 text-center">
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] hover:text-[#9E7B4F] transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#EAE6DF] transition-colors group"
           >
             <span>Read all frequently asked questions</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

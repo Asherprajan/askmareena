@@ -1,48 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #FAF8F5;
-  --color-canvas-subtle: #F3EFEA;
-  --color-canvas-dark: #121517;
+  --color-canvas: #080A0C;
+  --color-canvas-subtle: #0D1013;
+  --color-canvas-card: #12161B;
+  --color-canvas-elevated: #161B22;
 
-  --color-surface: #FFFFFF;
-  --color-surface-hover: #FBF9F6;
-  --color-surface-tint: #F5F1EB;
-  --color-surface-dark: #1A1D20;
-  --color-surface-dark-hover: #22262B;
+  --color-surface: #0E1216;
+  --color-surface-hover: #161B21;
+  --color-surface-tint: #1C232B;
 
-  --color-charcoal-primary: #14171A;
-  --color-charcoal-secondary: #3E444B;
-  --color-slate-muted: #525866;
-  --color-slate-subtle: #7A8291;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C5CCD6;
+  --color-text-muted: #8E99A8;
 
-  --color-border-hairline: #E8E4DC;
-  --color-border-subtle: #DCD6CA;
-  --color-border-dark: #272C32;
+  --color-border-hairline: rgba(255, 255, 255, 0.1);
+  --color-border-subtle: rgba(255, 255, 255, 0.18);
+  --color-border-strong: rgba(255, 255, 255, 0.28);
 
-  --color-accent: #B8976C;
-  --color-accent-hover: #A18158;
-  --color-accent-light: #F8F4EE;
-  --color-accent-glow: rgba(184, 151, 108, 0.12);
+  --color-btn-light: #EAE6DF;
+  --color-btn-light-hover: #DCD7CE;
 
   --font-serif: var(--font-playfair), "Georgia", serif;
   --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --background: #FAF8F5;
-  --foreground: #14171A;
+  --background: #080A0C;
+  --foreground: #FFFFFF;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
-  background-color: var(--background);
+  color-scheme: dark;
+  background-color: #080A0C;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #080A0C;
+  color: #FFFFFF;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,13 +48,13 @@ body {
 
 /* Custom Selection Styling */
 ::selection {
-  background-color: #B8976C;
-  color: #FFFFFF;
+  background-color: #EAE6DF;
+  color: #080A0C;
 }
 
 /* Accessible visible focus states */
 :focus-visible {
-  outline: 2px solid #B8976C;
+  outline: 2px solid #EAE6DF;
   outline-offset: 2px;
 }
 

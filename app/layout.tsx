@@ -46,9 +46,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <meta name="theme-color" content="#FAF8F5" />
+        <meta name="theme-color" content="#080A0C" />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#14171A] selection:bg-[#B8976C] selection:text-white">
+      <body className="min-h-screen flex flex-col bg-[#080A0C] text-white selection:bg-[#EAE6DF] selection:text-[#080A0C]">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-[#14171A] text-white rounded-md text-sm font-medium shadow-lg"

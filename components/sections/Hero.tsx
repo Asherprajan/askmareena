@@ -1,141 +1,84 @@
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative pt-6 sm:pt-10 lg:pt-16 pb-16 sm:pb-24 overflow-hidden">
-      {/* Subtle warm background accent */}
-      <div
-        className="absolute top-0 right-0 w-1/2 h-[500px] bg-gradient-to-b from-[#F3EFEA]/80 to-transparent pointer-events-none -z-10"
-        aria-hidden="true"
-      />
+    <section className="relative flex items-center pt-8 pb-10 lg:pt-12 lg:pb-14 overflow-hidden bg-[#080A0C]">
+      {/* Background Skyline Image with Cinematic Gradients */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/dubai-skyline-night.jpg"
+          alt="Dubai Skyline Night with Burj Khalifa"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right md:object-center opacity-85"
+        />
+        {/* Dark Vignettes & Gradients for High Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080A0C] via-[#080A0C]/80 to-[#080A0C]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080A0C] via-transparent to-[#080A0C]/50" />
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#080A0C] to-transparent" />
+      </div>
 
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Text Content Column */}
+      <Container className="relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center pt-6 lg:pt-10">
+          {/* Left Column: Primary Headline & Narrative */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
-            {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#F3EFEA] border border-[#E8E4DC] text-xs font-medium text-[#7A8291]">
-              <span className="w-2 h-2 rounded-full bg-[#B8976C]" />
-              <span className="text-[#14171A] font-semibold uppercase tracking-[0.12em] text-[11px]">
-                UAE Business Consultancy
-              </span>
-              <span className="text-[#B8976C]">•</span>
-              <span>12+ Years in the UAE</span>
+            {/* Tracked Eyebrow */}
+            <div className="text-xs uppercase tracking-[0.24em] text-[#9EA6B0] font-medium">
+              Ask Mareena · UAE
             </div>
 
-            {/* Editorial Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[4rem] font-normal tracking-tight text-[#14171A] leading-[1.12]">
-              Clear, straight-talking guidance to build your venture in the UAE.
+            {/* Massive Serif Headline */}
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5rem] font-normal tracking-tight text-white leading-[1.06]">
+              Your 360°<br />
+              Business Guide<br />
+              in the UAE.
             </h1>
 
-            {/* Lead Narrative */}
-            <p className="text-lg sm:text-xl text-[#525866] leading-relaxed max-w-2xl font-normal">
-              Navigating mainland jurisdictions, free zones, corporate structuring, and tax compliance requires practical, personal guidance. Consult directly with Mareena Tessa Thomas to turn your business vision into an established reality.
+            {/* Subheadline */}
+            <p className="text-base sm:text-lg text-[#C5CCD6] leading-relaxed max-w-xl font-normal">
+              Practical guidance for company formation, corporate structuring, tax, compliance, residency and ongoing business support.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
-              <Button
+            {/* Action Buttons matching reference */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <Link
                 href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-4 h-4" />}
-                className="shadow-sm"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-[#EAE6DF] hover:bg-white text-[#080A0C] font-semibold text-sm rounded-xs tracking-tight transition-all duration-200 shadow-md text-center"
               >
                 Ask Mareena
-              </Button>
-              <Button
+              </Link>
+              <Link
                 href="/services"
-                variant="secondary"
-                size="lg"
+                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 hover:border-white text-white font-medium text-sm rounded-xs tracking-tight transition-all duration-200 bg-black/20 hover:bg-white/10 backdrop-blur-xs text-center"
               >
                 Explore Services
-              </Button>
-            </div>
-
-            {/* Trust highlights strip */}
-            <div className="pt-6 sm:pt-8 border-t border-[#E8E4DC] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-              <div className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#B8976C] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs uppercase tracking-wider font-semibold text-[#14171A]">
-                    Direct Advisory
-                  </h4>
-                  <p className="text-xs text-[#7A8291] mt-0.5">
-                    No rotating agency staff
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-[#B8976C] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs uppercase tracking-wider font-semibold text-[#14171A]">
-                    Complete Scope
-                  </h4>
-                  <p className="text-xs text-[#7A8291] mt-0.5">
-                    Mainland, Free Zones & Tax
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="w-4 h-4 rounded-full border border-[#B8976C] flex items-center justify-center text-[10px] font-bold text-[#B8976C] shrink-0 mt-0.5">
-                  12
-                </span>
-                <div>
-                  <h4 className="text-xs uppercase tracking-wider font-semibold text-[#14171A]">
-                    12+ Years in UAE
-                  </h4>
-                  <p className="text-xs text-[#7A8291] mt-0.5">
-                    Deep regulatory familiarity
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
 
-          {/* Portrait Column */}
+          {/* Right Column: Floating Dark Glassmorphic Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              {/* Decorative subtle frame offset */}
-              <div
-                className="absolute inset-0 translate-x-3 translate-y-3 border border-[#E8E4DC] rounded-sm -z-10 bg-[#F3EFEA]"
-                aria-hidden="true"
-              />
-
-              {/* Image Container */}
-              <div className="relative aspect-square w-full rounded-sm overflow-hidden bg-white border border-[#E8E4DC] shadow-md">
-                <Image
-                  src="/images/brand/mareena-tessa-thomas.jpg"
-                  alt="Mareena Tessa Thomas — UAE Business Consultant"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 420px"
-                  priority
-                  className="object-cover object-center"
-                />
+            <div className="w-full max-w-md p-8 sm:p-10 bg-[#0C0F13]/85 backdrop-blur-md border border-white/15 rounded-sm shadow-2xl space-y-6">
+              {/* Card Eyebrow */}
+              <div className="text-xs uppercase tracking-[0.22em] text-[#9EA6B0] font-medium">
+                Clarity · Compliance · Structure
               </div>
 
-              {/* Portrait Label Card */}
-              <div className="absolute -bottom-5 left-4 right-4 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-sm p-4 rounded-sm border border-[#E8E4DC] shadow-sm">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-serif text-base font-semibold text-[#14171A]">
-                      Mareena Tessa Thomas
-                    </h3>
-                    <p className="text-xs text-[#7A8291]">
-                      Corporate Structuring & Company Formation
-                    </p>
-                  </div>
-                  <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-[#FAF8F5] text-[#9E7B4F] border border-[#E8E4DC]">
-                    UAE
-                  </span>
-                </div>
-              </div>
+              {/* Card Headline */}
+              <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white leading-[1.18]">
+                From an idea<br />
+                to an operating<br />
+                UAE business.
+              </h2>
+
+              {/* Card Body */}
+              <p className="text-sm text-[#C5CCD6] leading-relaxed font-normal">
+                One point of contact to help you understand the process, coordinate the right steps and keep your business moving.
+              </p>
             </div>
           </div>
         </div>

@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#121517] text-white border-t border-[#272C32] pt-16 sm:pt-20 pb-12">
+    <footer className="bg-[#06080A] text-white border-t border-white/10 pt-16 sm:pt-20 pb-12">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-14 border-b border-[#272C32]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-14 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
             <Link
@@ -161,7 +161,7 @@ export default function Footer() {
             <div className="pt-1">
               <Link
                 href="/contact"
-                className="inline-block text-xs uppercase tracking-wider font-semibold py-2 px-3.5 bg-[#B8976C] text-white hover:bg-[#A18158] transition-colors rounded-sm text-center"
+                className="inline-block text-xs uppercase tracking-wider font-semibold py-2.5 px-4 bg-[#EAE6DF] text-[#080A0C] hover:bg-white transition-colors rounded-xs text-center"
               >
                 Ask Mareena
               </Link>
@@ -171,11 +171,11 @@ export default function Footer() {
 
         {/* Regulatory Disclaimer & Legal Bottom */}
         <div className="pt-8 space-y-6">
-          <p className="text-xs text-[#7A8291] leading-relaxed max-w-4xl">
-            <strong className="text-[#A3ABB5] font-medium">Regulatory Notice:</strong> Services are subject to competent authority requirements, eligibility criteria, applicable UAE legislation, and official government approvals. Fees, capital requirements, and timelines vary by case. The information presented on this website is for general educational and informational purposes and does not constitute regulated legal, judicial, or certified tax advice.
+          <p className="text-xs text-[#8E99A8] leading-relaxed max-w-4xl">
+            <strong className="text-white font-medium">Regulatory Notice:</strong> Services are subject to competent authority requirements, eligibility criteria, applicable UAE legislation, and official government approvals. Fees, capital requirements, and timelines vary by case. The information presented on this website is for general educational and informational purposes and does not constitute regulated legal, judicial, or certified tax advice.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-[#272C32] text-xs text-[#7A8291]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-[#8E99A8]">
             <p>© {currentYear} Ask Mareena. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link

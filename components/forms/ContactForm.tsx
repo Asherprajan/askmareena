@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { CheckCircle2, AlertCircle, Loader2, ArrowRight } from "lucide-react";
-import Button from "@/components/ui/Button";
 
 interface FormState {
   name: string;
@@ -10,7 +9,7 @@ interface FormState {
   phone: string;
   service: string;
   message: string;
-  honeypot: string; // Anti-spam hidden field
+  honeypot: string;
 }
 
 interface FormErrors {
@@ -101,7 +100,6 @@ export default function ContactForm() {
           result.message ||
             "Thank you. Your enquiry has been sent directly to Mareena."
         );
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -131,23 +129,23 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div
-        className="p-8 sm:p-10 bg-white rounded-sm border border-[#E8E4DC] shadow-sm text-center space-y-5"
+        className="p-8 sm:p-10 bg-[#0E1216] rounded-sm border border-white/15 text-center space-y-5 shadow-2xl"
         role="alert"
         aria-live="polite"
       >
-        <div className="w-14 h-14 rounded-full bg-[#F3EFEA] border border-[#B8976C] flex items-center justify-center mx-auto text-[#9E7B4F]">
+        <div className="w-14 h-14 rounded-full bg-white/10 border border-white/30 flex items-center justify-center mx-auto text-white">
           <CheckCircle2 className="w-8 h-8" />
         </div>
 
-        <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#14171A]">
+        <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
           Enquiry Received
         </h3>
 
-        <p className="text-base text-[#525866] max-w-md mx-auto leading-relaxed">
+        <p className="text-base text-[#C5CCD6] max-w-md mx-auto leading-relaxed">
           {successMessage}
         </p>
 
-        <p className="text-xs text-[#7A8291] max-w-sm mx-auto">
+        <p className="text-xs text-[#8E99A8] max-w-sm mx-auto">
           Mareena reviews every message personally and will be in touch via email or WhatsApp to schedule your initial consultation.
         </p>
 
@@ -155,7 +153,7 @@ export default function ContactForm() {
           <button
             type="button"
             onClick={() => setStatus("idle")}
-            className="text-xs uppercase tracking-wider font-semibold text-[#14171A] hover:text-[#9E7B4F] underline underline-offset-4"
+            className="text-xs uppercase tracking-wider font-semibold text-white hover:text-[#EAE6DF] underline underline-offset-4 cursor-pointer"
           >
             Send another enquiry
           </button>
@@ -168,9 +166,8 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="p-8 sm:p-10 bg-white rounded-sm border border-[#E8E4DC] shadow-sm space-y-6"
+      className="p-8 sm:p-10 bg-[#0E1216] rounded-sm border border-white/10 shadow-2xl space-y-6"
     >
-      {/* Honeypot field for bot mitigation - hidden from visual users and screen readers */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="form-website-field">Leave this empty</label>
         <input
@@ -186,21 +183,21 @@ export default function ContactForm() {
 
       {errors.general && (
         <div
-          className="p-4 bg-red-50 border border-red-200 text-red-800 text-xs sm:text-sm rounded-sm flex items-start gap-2.5"
+          className="p-4 bg-red-950/40 border border-red-500/40 text-red-200 text-xs sm:text-sm rounded-xs flex items-start gap-2.5"
           role="alert"
         >
-          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-400" />
           <span>{errors.general}</span>
         </div>
       )}
 
       {/* Name Field */}
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         <label
           htmlFor="contact-name"
-          className="block text-xs uppercase tracking-wider font-semibold text-[#14171A]"
+          className="block text-xs uppercase tracking-[0.14em] font-medium text-[#C5CCD6]"
         >
-          Full Name <span className="text-red-500">*</span>
+          Full Name <span className="text-red-400">*</span>
         </label>
         <input
           id="contact-name"
@@ -213,26 +210,26 @@ export default function ContactForm() {
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "name-error" : undefined}
           placeholder="e.g. Alexander Vance"
-          className={`w-full px-4 py-3 rounded-sm border text-sm text-[#14171A] placeholder-[#7A8291]/60 focus:bg-white focus:outline-none transition-colors ${
+          className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors ${
             errors.name
-              ? "border-red-500 bg-red-50/20"
-              : "border-[#E8E4DC] bg-[#FAF8F5] focus:border-[#B8976C]"
+              ? "border-red-500 bg-red-950/20"
+              : "border-white/15 bg-[#13171D] focus:border-white"
           }`}
         />
         {errors.name && (
-          <p id="name-error" className="text-xs text-red-600 mt-1">
+          <p id="name-error" className="text-xs text-red-400 mt-1">
             {errors.name}
           </p>
         )}
       </div>
 
       {/* Email Field */}
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         <label
           htmlFor="contact-email"
-          className="block text-xs uppercase tracking-wider font-semibold text-[#14171A]"
+          className="block text-xs uppercase tracking-[0.14em] font-medium text-[#C5CCD6]"
         >
-          Email Address <span className="text-red-500">*</span>
+          Email Address <span className="text-red-400">*</span>
         </label>
         <input
           id="contact-email"
@@ -245,26 +242,26 @@ export default function ContactForm() {
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "email-error" : undefined}
           placeholder="e.g. alexander@company.com"
-          className={`w-full px-4 py-3 rounded-sm border text-sm text-[#14171A] placeholder-[#7A8291]/60 focus:bg-white focus:outline-none transition-colors ${
+          className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors ${
             errors.email
-              ? "border-red-500 bg-red-50/20"
-              : "border-[#E8E4DC] bg-[#FAF8F5] focus:border-[#B8976C]"
+              ? "border-red-500 bg-red-950/20"
+              : "border-white/15 bg-[#13171D] focus:border-white"
           }`}
         />
         {errors.email && (
-          <p id="email-error" className="text-xs text-red-600 mt-1">
+          <p id="email-error" className="text-xs text-red-400 mt-1">
             {errors.email}
           </p>
         )}
       </div>
 
-      {/* Phone / WhatsApp Field */}
-      <div className="space-y-1.5">
+      {/* Phone Field */}
+      <div className="space-y-2">
         <label
           htmlFor="contact-phone"
-          className="block text-xs uppercase tracking-wider font-semibold text-[#14171A]"
+          className="block text-xs uppercase tracking-[0.14em] font-medium text-[#C5CCD6]"
         >
-          Phone or WhatsApp Number <span className="text-[#7A8291] font-normal lowercase">(optional)</span>
+          Phone or WhatsApp Number <span className="text-[#8E99A8] font-normal lowercase">(optional)</span>
         </label>
         <input
           id="contact-phone"
@@ -274,17 +271,17 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           placeholder="e.g. +971 50 000 0000"
-          className="w-full px-4 py-3 rounded-sm border border-[#E8E4DC] bg-[#FAF8F5] text-sm text-[#14171A] placeholder-[#7A8291]/60 focus:bg-white focus:border-[#B8976C] focus:outline-none transition-colors"
+          className="w-full px-4 py-3 rounded-xs border border-white/15 bg-[#13171D] text-sm text-white placeholder-white/30 focus:border-white focus:outline-none transition-colors"
         />
       </div>
 
-      {/* Service Requirement Selection */}
-      <div className="space-y-1.5">
+      {/* Service Requirement */}
+      <div className="space-y-2">
         <label
           htmlFor="contact-service"
-          className="block text-xs uppercase tracking-wider font-semibold text-[#14171A]"
+          className="block text-xs uppercase tracking-[0.14em] font-medium text-[#C5CCD6]"
         >
-          Primary Service Area <span className="text-red-500">*</span>
+          Primary Service Area <span className="text-red-400">*</span>
         </label>
         <select
           id="contact-service"
@@ -292,10 +289,10 @@ export default function ContactForm() {
           required
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-sm border border-[#E8E4DC] bg-[#FAF8F5] text-sm text-[#14171A] focus:bg-white focus:border-[#B8976C] focus:outline-none transition-colors cursor-pointer"
+          className="w-full px-4 py-3 rounded-xs border border-white/15 bg-[#13171D] text-sm text-white focus:border-white focus:outline-none transition-colors cursor-pointer"
         >
           {serviceOptions.map((opt) => (
-            <option key={opt} value={opt}>
+            <option key={opt} value={opt} className="bg-[#13171D] text-white">
               {opt}
             </option>
           ))}
@@ -303,12 +300,12 @@ export default function ContactForm() {
       </div>
 
       {/* Message Field */}
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         <label
           htmlFor="contact-message"
-          className="block text-xs uppercase tracking-wider font-semibold text-[#14171A]"
+          className="block text-xs uppercase tracking-[0.14em] font-medium text-[#C5CCD6]"
         >
-          Tell Mareena About Your Requirement <span className="text-red-500">*</span>
+          Tell Mareena About Your Requirement <span className="text-red-400">*</span>
         </label>
         <textarea
           id="contact-message"
@@ -320,25 +317,25 @@ export default function ContactForm() {
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
           placeholder="Briefly outline your proposed activities, current stage, target timeline, or specific questions..."
-          className={`w-full px-4 py-3 rounded-sm border text-sm text-[#14171A] placeholder-[#7A8291]/60 focus:bg-white focus:outline-none transition-colors resize-y ${
+          className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors resize-y ${
             errors.message
-              ? "border-red-500 bg-red-50/20"
-              : "border-[#E8E4DC] bg-[#FAF8F5] focus:border-[#B8976C]"
+              ? "border-red-500 bg-red-950/20"
+              : "border-white/15 bg-[#13171D] focus:border-white"
           }`}
         />
         {errors.message && (
-          <p id="message-error" className="text-xs text-red-600 mt-1">
+          <p id="message-error" className="text-xs text-red-400 mt-1">
             {errors.message}
           </p>
         )}
       </div>
 
-      {/* Submission Button */}
+      {/* Submit Button */}
       <div className="pt-2">
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full py-3.5 px-6 rounded-sm bg-[#14171A] text-white text-sm font-semibold tracking-tight uppercase hover:bg-[#B8976C] active:bg-[#9E7B4F] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+          className="w-full py-4 px-6 rounded-xs bg-[#EAE6DF] text-[#080A0C] text-sm font-semibold tracking-tight uppercase hover:bg-white active:bg-[#DCD7CE] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2 shadow-md cursor-pointer"
         >
           {status === "submitting" ? (
             <>
@@ -354,7 +351,7 @@ export default function ContactForm() {
         </button>
       </div>
 
-      <p className="text-[11px] text-[#7A8291] text-center leading-relaxed">
+      <p className="text-[11px] text-[#8E99A8] text-center leading-relaxed">
         Your enquiry details are handled confidentially and evaluated exclusively to provide guidance on your UAE business setup.
       </p>
     </form>

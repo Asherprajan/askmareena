@@ -43,15 +43,15 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#14171A] text-white hover:bg-[#2B3036] active:bg-[#0E1012] focus-visible:outline-[#14171A] shadow-sm",
+      "bg-[#EAE6DF] text-[#080A0C] hover:bg-white active:bg-[#D5D0C7] focus-visible:outline-white shadow-sm font-semibold",
     accent:
-      "bg-[#B8976C] text-white hover:bg-[#A18158] active:bg-[#8F724C] focus-visible:outline-[#B8976C] shadow-sm",
+      "bg-[#EAE6DF] text-[#080A0C] hover:bg-white active:bg-[#D5D0C7] focus-visible:outline-[#EAE6DF] shadow-sm font-semibold",
     secondary:
-      "bg-[#F3EFEA] text-[#14171A] hover:bg-[#EBE5DC] active:bg-[#DDD5C7] border border-[#E8E4DC]",
+      "bg-white/10 text-white hover:bg-white/15 active:bg-white/5 border border-white/15 backdrop-blur-xs",
     outline:
-      "bg-transparent text-[#14171A] hover:bg-[#14171A] hover:text-white border border-[#14171A] active:bg-[#2B3036]",
+      "bg-black/20 text-white hover:border-white hover:bg-white/10 border border-white/30 backdrop-blur-xs",
     ghost:
-      "bg-transparent text-[#14171A] hover:text-[#B8976C] p-0 hover:bg-transparent active:opacity-80",
+      "bg-transparent text-white/80 hover:text-white p-0 hover:bg-transparent active:opacity-80",
   }[variant];
 
   const content = (
