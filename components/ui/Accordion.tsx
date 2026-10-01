@@ -38,14 +38,20 @@ export default function Accordion({
   };
 
   return (
-    <div className={cn("divide-y divide-white/10 border-t border-b border-white/10", className)}>
+    <div className={cn("space-y-3", className)}>
       {items.map((item) => {
         const isOpen = openIds.includes(item.id);
         const buttonId = `accordion-btn-${item.id}`;
         const panelId = `accordion-panel-${item.id}`;
 
         return (
-          <div key={item.id} className="py-4 sm:py-5 transition-colors">
+          <div
+            key={item.id}
+            className="p-5 sm:p-6 rounded-xs glass-surface-interactive relative overflow-hidden group"
+          >
+            {/* Top specular highlight line */}
+            <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/35 transition-colors pointer-events-none" />
+
             <h3>
               <button
                 type="button"
@@ -53,15 +59,15 @@ export default function Accordion({
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggle(item.id)}
-                className="w-full flex items-center justify-between text-left gap-4 py-2 group focus-visible:outline-2 focus-visible:outline-white rounded-xs cursor-pointer"
+                className="w-full flex items-center justify-between text-left gap-4 group focus-visible:outline-2 focus-visible:outline-white rounded-xs cursor-pointer"
               >
                 <span className="font-serif text-lg sm:text-xl font-normal text-white group-hover:text-[#EAE6DF] transition-colors leading-snug">
                   {item.question}
                 </span>
                 <span
                   className={cn(
-                    "shrink-0 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#9EA6B0] transition-all duration-300 group-hover:border-white group-hover:text-white",
-                    isOpen && "bg-white text-[#080A0C] border-white rotate-180 group-hover:bg-white group-hover:text-[#080A0C]"
+                    "shrink-0 w-8 h-8 rounded-full glass-badge flex items-center justify-center text-[#9EA6B0] transition-all duration-300 group-hover:border-white group-hover:text-white",
+                    isOpen && "bg-[#EAE6DF] text-[#080A0C] border-[#EAE6DF] rotate-180 group-hover:bg-white group-hover:text-[#080A0C]"
                   )}
                   aria-hidden="true"
                 >
@@ -75,11 +81,13 @@ export default function Accordion({
               aria-labelledby={buttonId}
               className={cn(
                 "grid transition-all duration-300 ease-in-out overflow-hidden text-base leading-relaxed text-[#C5CCD6]",
-                isOpen ? "grid-rows-[1fr] opacity-100 pt-3 pb-2" : "grid-rows-[0fr] opacity-0"
+                isOpen ? "grid-rows-[1fr] opacity-100 pt-3 pb-1" : "grid-rows-[0fr] opacity-0"
               )}
             >
               <div className="overflow-hidden">
-                <p className="pr-4 sm:pr-8 text-sm sm:text-base leading-relaxed">{item.answer}</p>
+                <p className="pr-4 sm:pr-8 text-sm sm:text-base leading-relaxed text-[#9EA6B0]">
+                  {item.answer}
+                </p>
               </div>
             </div>
           </div>

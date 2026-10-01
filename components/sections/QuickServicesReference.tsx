@@ -52,13 +52,16 @@ export default function QuickServicesReference() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group p-6 sm:p-7 bg-[#0A0D11]/90 backdrop-blur-xs border border-white/10 hover:border-white/25 hover:bg-[#0E1318] rounded-xs transition-all duration-200 flex flex-col justify-between space-y-7 shadow-lg"
+                className="group p-6 sm:p-7 glass-surface-interactive rounded-xs flex flex-col justify-between space-y-7 relative overflow-hidden"
               >
-                <div>
-                  <div className="w-8 h-8 flex items-center justify-center text-white/90 group-hover:text-white transition-colors">
-                    <Icon className="w-6 h-6 stroke-[1.3]" />
+                {/* Top specular highlight edge */}
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/40 transition-colors pointer-events-none" />
+
+                <div className="relative z-10">
+                  <div className="w-10 h-10 rounded-xs glass-badge flex items-center justify-center text-white/90 group-hover:text-white transition-colors">
+                    <Icon className="w-5 h-5 stroke-[1.4]" />
                   </div>
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-white group-hover:text-[#EAE6DF] transition-colors mt-5">
+                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-white group-hover:text-[#EAE6DF] transition-colors mt-6">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#9EA6B0] leading-relaxed mt-2.5">
@@ -71,10 +74,13 @@ export default function QuickServicesReference() {
         </div>
 
         {/* Bottom Banner matching reference image: "NOT SURE WHERE TO BEGIN?" */}
-        <div className="mt-8 sm:mt-12 p-6 sm:p-9 rounded-xs border border-white/15 bg-gradient-to-r from-[#0C1014]/95 via-[#12171E]/95 to-[#0C1014]/95 backdrop-blur-md flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+        <div className="mt-8 sm:mt-12 p-6 sm:p-9 rounded-xs glass-surface flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+          {/* Specular highlight on top rim */}
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none" />
+
           {/* Subtle light reflection sheen */}
           <div
-            className="absolute top-0 right-1/4 w-80 h-32 bg-white/5 blur-[50px] pointer-events-none rounded-full"
+            className="absolute top-0 right-1/4 w-80 h-32 bg-white/[0.04] blur-[50px] pointer-events-none rounded-full"
             aria-hidden="true"
           />
 

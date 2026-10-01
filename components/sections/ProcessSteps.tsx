@@ -45,38 +45,51 @@ export default function ProcessSteps() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
-          {steps.map((step, idx) => (
-            <div
-              key={step.number}
-              className="relative p-6 sm:p-7 bg-[#0E1216] rounded-sm border border-white/10 space-y-4 flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                  <span className="font-serif text-3xl font-light text-white/50">
-                    {step.number}
-                  </span>
-                  <span className="text-[11px] uppercase tracking-wider font-medium text-[#9EA6B0] bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10">
-                    {step.phase}
-                  </span>
-                </div>
-                <h3 className="font-serif text-lg font-normal text-white leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#A3ABB5] leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+        {/* Desktop connecting light track */}
+        <div className="relative">
+          <div
+            className="hidden lg:block absolute top-1/2 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-y-12 z-0 pointer-events-none"
+            aria-hidden="true"
+          />
 
-              <div className="pt-3 text-[11px] text-[#8E99A8] italic border-t border-white/10">
-                Phase {idx + 1} of 4
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 relative z-10">
+            {steps.map((step, idx) => (
+              <div
+                key={step.number}
+                className="relative p-6 sm:p-7 glass-surface-interactive rounded-xs space-y-5 flex flex-col justify-between group"
+              >
+                {/* Subtle top edge highlight line */}
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:via-white/40 transition-colors" />
+
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3.5">
+                    <span className="font-serif text-3xl font-light text-white/50 group-hover:text-white/80 transition-colors">
+                      {step.number}
+                    </span>
+                    <span className="text-[11px] uppercase tracking-wider font-medium text-[#C5CCD6] glass-badge px-3 py-1 rounded-full">
+                      {step.phase}
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-lg font-normal text-white group-hover:text-[#EAE6DF] transition-colors leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9EA6B0] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+
+                <div className="pt-3.5 text-[11px] text-[#8E99A8] italic border-t border-white/10 flex items-center justify-between">
+                  <span>Phase {idx + 1} of 4</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-[#EAE6DF] transition-colors" />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="mt-12 p-4 sm:p-5 bg-[#0E1216] rounded-sm border border-white/10 text-center max-w-2xl mx-auto">
-          <p className="text-xs text-[#8E99A8] leading-relaxed">
+        <div className="mt-12 p-5 sm:p-6 glass-surface rounded-xs text-center max-w-2xl mx-auto relative overflow-hidden">
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+          <p className="text-xs text-[#9EA6B0] leading-relaxed relative z-10">
             <span className="font-medium text-white">Please note:</span> Processing timeframes and requirements are determined by competent UAE government authorities and vary by activity, jurisdiction, and clearances.
           </p>
         </div>

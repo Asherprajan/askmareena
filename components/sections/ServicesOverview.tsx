@@ -37,13 +37,16 @@ export default function ServicesOverview() {
             {servicesData.map((service) => (
               <div
                 key={service.slug}
-                className="group relative bg-[#0E1216] border border-white/10 p-6 sm:p-8 rounded-sm hover:border-white/30 transition-all duration-300"
+                className="group relative glass-surface-interactive p-6 sm:p-8 rounded-xs overflow-hidden"
               >
+                {/* Top specular highlight edge */}
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/35 transition-colors pointer-events-none" />
+
                 <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-4 mb-4">
-                  <span className="font-serif text-2xl font-light text-white/50">
+                  <span className="font-serif text-2xl font-light text-white/50 group-hover:text-white/80 transition-colors">
                     {service.id}
                   </span>
-                  <span className="text-[11px] uppercase tracking-wider font-medium text-[#8E99A8] bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10">
+                  <span className="text-[11px] uppercase tracking-wider font-medium text-[#C5CCD6] glass-badge px-3 py-0.5 rounded-full">
                     UAE Advisory
                   </span>
                 </div>
@@ -58,7 +61,7 @@ export default function ServicesOverview() {
                   </Link>
                 </h3>
 
-                <p className="text-sm text-[#A3ABB5] leading-relaxed mt-2.5">
+                <p className="text-sm text-[#9EA6B0] leading-relaxed mt-2.5">
                   {service.shortDescription}
                 </p>
 
@@ -67,7 +70,7 @@ export default function ServicesOverview() {
                   {service.subServices.slice(0, 3).map((sub) => (
                     <span
                       key={sub.title}
-                      className="text-xs text-[#C5CCD6] bg-white/5 px-2.5 py-1 rounded-sm border border-white/10"
+                      className="text-xs text-[#C5CCD6] glass-pill px-3 py-1 rounded-xs"
                     >
                       {sub.title}
                     </span>

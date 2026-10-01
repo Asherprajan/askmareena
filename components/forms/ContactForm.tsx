@@ -129,11 +129,13 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div
-        className="p-8 sm:p-10 bg-[#0E1216] rounded-sm border border-white/15 text-center space-y-5 shadow-2xl"
+        className="p-8 sm:p-10 glass-surface rounded-xs text-center space-y-5 shadow-2xl relative overflow-hidden"
         role="alert"
         aria-live="polite"
       >
-        <div className="w-14 h-14 rounded-full bg-white/10 border border-white/30 flex items-center justify-center mx-auto text-white">
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none" />
+
+        <div className="w-14 h-14 rounded-full glass-badge flex items-center justify-center mx-auto text-white">
           <CheckCircle2 className="w-8 h-8" />
         </div>
 
@@ -166,8 +168,9 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="p-8 sm:p-10 bg-[#0E1216] rounded-sm border border-white/10 shadow-2xl space-y-6"
+      className="p-8 sm:p-10 glass-surface rounded-xs shadow-2xl space-y-6 relative overflow-hidden"
     >
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none" />
       <div className="hidden" aria-hidden="true">
         <label htmlFor="form-website-field">Leave this empty</label>
         <input
@@ -213,7 +216,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors ${
             errors.name
               ? "border-red-500 bg-red-950/20"
-              : "border-white/15 bg-[#13171D] focus:border-white"
+              : "border-white/15 glass-input focus:border-white"
           }`}
         />
         {errors.name && (
@@ -245,7 +248,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors ${
             errors.email
               ? "border-red-500 bg-red-950/20"
-              : "border-white/15 bg-[#13171D] focus:border-white"
+              : "border-white/15 glass-input focus:border-white"
           }`}
         />
         {errors.email && (
@@ -271,7 +274,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           placeholder="e.g. +971 50 000 0000"
-          className="w-full px-4 py-3 rounded-xs border border-white/15 bg-[#13171D] text-sm text-white placeholder-white/30 focus:border-white focus:outline-none transition-colors"
+          className="w-full px-4 py-3 rounded-xs border border-white/15 glass-input text-sm text-white placeholder-white/30 focus:border-white focus:outline-none transition-colors"
         />
       </div>
 
@@ -289,10 +292,10 @@ export default function ContactForm() {
           required
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xs border border-white/15 bg-[#13171D] text-sm text-white focus:border-white focus:outline-none transition-colors cursor-pointer"
+          className="w-full px-4 py-3 rounded-xs border border-white/15 glass-input text-sm text-white focus:border-white focus:outline-none transition-colors cursor-pointer"
         >
           {serviceOptions.map((opt) => (
-            <option key={opt} value={opt} className="bg-[#13171D] text-white">
+            <option key={opt} value={opt} className="bg-[#0C1014] text-white">
               {opt}
             </option>
           ))}
@@ -320,7 +323,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 rounded-xs border text-sm text-white placeholder-white/30 focus:outline-none transition-colors resize-y ${
             errors.message
               ? "border-red-500 bg-red-950/20"
-              : "border-white/15 bg-[#13171D] focus:border-white"
+              : "border-white/15 glass-input focus:border-white"
           }`}
         />
         {errors.message && (

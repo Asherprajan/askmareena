@@ -43,21 +43,24 @@ export default function ApproachValue() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {values.map((v) => {
             const Icon = v.icon;
             return (
               <div
                 key={v.title}
-                className="space-y-4 p-6 sm:p-7 bg-[#101419] rounded-sm border border-white/10 hover:border-white/25 transition-colors"
+                className="space-y-4 p-6 sm:p-7 glass-surface-interactive rounded-xs relative overflow-hidden group"
               >
-                <div className="w-10 h-10 rounded-xs bg-white/5 border border-white/15 flex items-center justify-center text-white">
-                  <Icon className="w-5 h-5 stroke-[1.5]" />
+                {/* Specular top highlight line */}
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/35 transition-colors pointer-events-none" />
+
+                <div className="w-11 h-11 rounded-xs glass-badge flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+                  <Icon className="w-5 h-5 stroke-[1.4]" />
                 </div>
-                <h3 className="font-serif text-xl font-normal text-white">
+                <h3 className="font-serif text-xl font-normal text-white group-hover:text-[#EAE6DF] transition-colors">
                   {v.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A3ABB5] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#9EA6B0] leading-relaxed">
                   {v.description}
                 </p>
               </div>

@@ -53,7 +53,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 hover:border-white text-white font-medium text-sm rounded-xs tracking-tight transition-all duration-200 bg-black/20 hover:bg-white/10 backdrop-blur-xs text-center"
+                className="inline-flex items-center justify-center px-7 py-3.5 glass-surface-interactive hover:border-white text-white font-medium text-sm rounded-xs tracking-tight transition-all duration-200 text-center"
               >
                 Explore Services
               </Link>
@@ -62,21 +62,29 @@ export default function Hero() {
 
           {/* Right Column: Floating Dark Glassmorphic Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-md p-8 sm:p-10 bg-[#0C0F13]/85 backdrop-blur-md border border-white/15 rounded-sm shadow-2xl space-y-6">
+            <div className="w-full max-w-md p-8 sm:p-10 glass-surface rounded-xs shadow-2xl space-y-6 relative overflow-hidden">
+              {/* Top specular highlight edge */}
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none" />
+              {/* Internal subtle light bloom */}
+              <div
+                className="absolute -top-16 -right-16 w-44 h-44 bg-white/[0.04] blur-2xl pointer-events-none rounded-full"
+                aria-hidden="true"
+              />
+
               {/* Card Eyebrow */}
-              <div className="text-xs uppercase tracking-[0.22em] text-[#9EA6B0] font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-[#9EA6B0] font-medium relative z-10">
                 Clarity · Compliance · Structure
               </div>
 
               {/* Card Headline */}
-              <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white leading-[1.18]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white leading-[1.18] relative z-10">
                 From an idea<br />
                 to an operating<br />
                 UAE business.
               </h2>
 
               {/* Card Body */}
-              <p className="text-sm text-[#C5CCD6] leading-relaxed font-normal">
+              <p className="text-sm text-[#C5CCD6] leading-relaxed font-normal relative z-10">
                 One point of contact to help you understand the process, coordinate the right steps and keep your business moving.
               </p>
             </div>

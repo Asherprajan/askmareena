@@ -98,7 +98,8 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
             </div>
 
             {/* Quick Scope Card */}
-            <div className="lg:col-span-4 bg-[#0E1216] p-6 sm:p-7 rounded-sm border border-white/10 shadow-xl space-y-4">
+            <div className="lg:col-span-4 glass-surface p-6 sm:p-7 rounded-xs shadow-xl space-y-4 relative overflow-hidden">
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
               <h3 className="font-serif text-base font-normal text-white border-b border-white/10 pb-3">
                 Scope Highlights
               </h3>
@@ -125,7 +126,7 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
       </section>
 
       {/* What is Covered / Sub-Services */}
-      <section className="py-20 sm:py-28 bg-[#0C0F13] border-b border-white/10">
+      <section className="py-20 sm:py-28 bg-[#080A0C] border-b border-white/10">
         <Container>
           <div className="max-w-3xl mb-14">
             <SectionHeading
@@ -135,19 +136,20 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {service.subServices.map((sub, i) => (
               <div
                 key={sub.title}
-                className="p-6 sm:p-7 bg-[#101419] rounded-sm border border-white/10 space-y-3"
+                className="p-6 sm:p-7 glass-surface-interactive rounded-xs space-y-3.5 relative overflow-hidden group"
               >
-                <div className="text-xs uppercase tracking-wider font-medium text-[#9EA6B0]">
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/35 transition-colors pointer-events-none" />
+                <div className="text-[11px] uppercase tracking-wider font-medium text-[#C5CCD6] glass-badge px-2.5 py-0.5 rounded-full inline-block">
                   Area 0{i + 1}
                 </div>
-                <h3 className="font-serif text-xl font-normal text-white">
+                <h3 className="font-serif text-xl font-normal text-white group-hover:text-[#EAE6DF] transition-colors">
                   {sub.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A3ABB5] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#9EA6B0] leading-relaxed">
                   {sub.description}
                 </p>
               </div>
@@ -170,9 +172,9 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
                 {service.targetAudience.map((audience, i) => (
                   <li
                     key={i}
-                    className="p-4 bg-[#0E1216] rounded-sm border border-white/10 flex items-start gap-3"
+                    className="p-4 glass-surface-interactive rounded-xs flex items-start gap-3"
                   >
-                    <span className="w-5 h-5 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-xs font-semibold text-white shrink-0 mt-0.5">
+                    <span className="w-5 h-5 rounded-full glass-badge flex items-center justify-center text-xs font-semibold text-white shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     <span className="text-sm text-white font-normal leading-relaxed">
@@ -193,7 +195,7 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
                 {service.engagementSteps.map((step, i) => (
                   <li
                     key={i}
-                    className="p-4 bg-[#0E1216] rounded-sm border border-white/10 flex items-start gap-4"
+                    className="p-4 glass-surface-interactive rounded-xs flex items-start gap-4"
                   >
                     <span className="font-serif text-xl font-light text-white/50 shrink-0">
                       0{i + 1}
@@ -212,9 +214,10 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
       </section>
 
       {/* Important Considerations / Disclaimer Callout */}
-      <section className="py-16 sm:py-20 bg-[#0C0F13] border-b border-white/10">
+      <section className="py-16 sm:py-20 bg-[#080A0C] border-b border-white/10">
         <Container size="narrow">
-          <div className="p-6 sm:p-8 rounded-sm bg-[#101419] border border-white/15 space-y-4">
+          <div className="p-6 sm:p-8 rounded-xs glass-surface space-y-4 relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
             <div className="flex items-center gap-2.5 text-white">
               <AlertCircle className="w-5 h-5 text-white/80" />
               <h3 className="font-serif text-lg font-normal text-white">
@@ -250,7 +253,7 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
       )}
 
       {/* Explore Other Services */}
-      <section className="py-16 sm:py-24 bg-[#0C0F13] border-b border-white/10">
+      <section className="py-16 sm:py-24 bg-[#080A0C] border-b border-white/10">
         <Container>
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <h3 className="font-serif text-2xl font-normal text-white">
@@ -269,16 +272,17 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
               <Link
                 key={item.slug}
                 href={`/services/${item.slug}`}
-                className="group p-6 rounded-sm bg-[#101419] border border-white/10 hover:border-white/30 transition-all"
+                className="group p-6 rounded-xs glass-surface-interactive space-y-3 relative overflow-hidden"
               >
-                <span className="font-serif text-xl text-white/50 block mb-2">
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:via-white/35 transition-colors pointer-events-none" />
+                <span className="font-serif text-xl text-white/50 block">
                   {item.id}
                 </span>
                 <h4 className="font-serif text-lg font-normal text-white group-hover:text-[#EAE6DF] transition-colors flex items-center justify-between">
                   <span>{item.title}</span>
                   <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h4>
-                <p className="text-xs text-[#8E99A8] mt-2 line-clamp-2">
+                <p className="text-xs text-[#8E99A8] line-clamp-2">
                   {item.shortDescription}
                 </p>
               </Link>
