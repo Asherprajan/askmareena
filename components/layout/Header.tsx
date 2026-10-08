@@ -46,13 +46,13 @@ export default function Header() {
               className="flex items-center gap-3.5 group focus-visible:outline-2 focus-visible:outline-white rounded-xs"
               aria-label="Ask Mareena - Home"
             >
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-white/70 bg-black/60 shadow-xs shrink-0">
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0">
                 <Image
-                  src="/images/brand/mareena-tessa-thomas.jpg"
-                  alt="Mareena Tessa Thomas"
+                  src="/images/logo.png"
+                  alt="Ask Mareena Logo"
                   fill
-                  sizes="40px"
-                  className="object-cover grayscale contrast-125"
+                  sizes="(max-width: 640px) 44px, 48px"
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -94,7 +94,7 @@ export default function Header() {
                 href="/contact"
                 className="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-white/35 rounded-xs text-xs uppercase tracking-[0.14em] font-medium text-white hover:bg-white hover:text-[#080A0C] transition-all duration-200"
               >
-                <span>Ask Mareena</span>
+                <span>Get in Touch</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
 

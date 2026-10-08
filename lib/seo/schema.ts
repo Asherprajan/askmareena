@@ -33,7 +33,7 @@ export function generateOrganizationSchema() {
     email: "askmareena@gmail.com",
     telephone: "+971542658225",
     description:
-      "Premium UAE business consultancy specializing in company formation, corporate structuring, tax, compliance, residency, and ongoing corporate services.",
+      "Straight-talking UAE business consultancy specializing in corporate structuring & company formation, business consulting with tax treaties, feasibility services, and professional content writing.",
     founder: {
       "@type": "Person",
       name: "Mareena Tessa Thomas",

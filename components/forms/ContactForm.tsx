@@ -21,12 +21,11 @@ interface FormErrors {
 }
 
 const serviceOptions = [
-  "Company Formation",
-  "Corporate Structuring",
-  "Tax & Accounting",
-  "Compliance",
-  "Visa / Residency",
-  "Other",
+  "Corporate Structuring & Company Formation",
+  "Business Consulting with Tax Treaties",
+  "Feasibility Services",
+  "Content Writing",
+  "Other Consultation",
 ];
 
 export default function ContactForm() {
@@ -34,7 +33,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    service: "Company Formation",
+    service: "Corporate Structuring & Company Formation",
     message: "",
     honeypot: "",
   });

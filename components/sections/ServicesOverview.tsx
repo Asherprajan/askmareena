@@ -14,8 +14,8 @@ export default function ServicesOverview() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
             <SectionHeading
               eyebrow="Core Services"
-              title="Six pillars of structured UAE corporate guidance."
-              description="From choosing your first licensing authority to managing ongoing tax filings and corporate restructuring, every step is coordinated with personal attention."
+              title="Structured corporate guidance for UAE business establishment."
+              description="Practical, straightforward guidance for entrepreneurs, investors and businesses establishing and structuring their presence in the UAE."
             />
 
             <div className="pt-4 hidden lg:block space-y-4">
@@ -26,7 +26,7 @@ export default function ServicesOverview() {
                 href="/services"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#EAE6DF] transition-colors group"
               >
-                <span>Compare all six service scopes</span>
+                <span>Explore all business services</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>

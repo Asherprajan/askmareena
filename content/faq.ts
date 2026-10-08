@@ -11,7 +11,7 @@ export const faqData: FAQItem[] = [
     category: "General",
     question: "What does Ask Mareena do?",
     answer:
-      "Ask Mareena provides personal, practical business consultancy and coordination across six core pillars: Company Formation (Mainland, Free Zones, Offshore), Corporate Structuring (Holding structures, DIFC/ADGM Foundations), Tax & Accounting (Corporate Tax, VAT, TRCs), Compliance (AML/CFT, goAML, internal audit), Visas & Residency (Golden Visas, Investor Visas), and Ongoing Corporate Services (Renewals, Amendments, Liquidation).",
+      "Ask Mareena provides practical, straightforward business consultancy across four core areas: Corporate Structuring & Company Formation (Mainland, Free Zones, Offshore, and governance architecture), Business Consulting with Country Tax Treaties (cross-border structures, DTAA analysis, and TRCs), Feasibility Services (evaluating business ideas, market potential, and operational requirements), and Content Writing (company profiles, websites, presentations, and corporate communications).",
   },
   {
     id: "faq-2",

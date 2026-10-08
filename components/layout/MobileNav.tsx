@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, ArrowRight } from "lucide-react";
 
@@ -65,9 +66,24 @@ export default function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps)
         <div>
           {/* Header */}
           <div className="flex items-center justify-between pb-6 border-b border-white/10">
-            <span className="font-serif text-lg tracking-[0.16em] uppercase font-medium text-white">
-              Ask Mareena
-            </span>
+            <Link
+              href="/"
+              onClick={onClose}
+              className="flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-white rounded-xs"
+            >
+              <div className="relative w-10 h-10 shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt="Ask Mareena Logo"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
+              </div>
+              <span className="font-serif text-base tracking-[0.16em] uppercase font-medium text-white">
+                Ask Mareena
+              </span>
+            </Link>
             <button
               ref={closeButtonRef}
               type="button"

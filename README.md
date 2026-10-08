@@ -7,18 +7,16 @@ Official website for **Ask Mareena** ([askmareena.com](https://askmareena.com)) 
 - **Framework:** [Next.js](https://nextjs.org/) 16 (App Router)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) v4
-- **Typography:** Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) via `next/font/google`
+- **Typography:** Syne (Display/Headlines) & Inter (Body/UI) via `next/font/google`
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Deployment:** Vercel-ready
 
-## Core Service Pillars
+## Core Business Services
 
-1. **Company Formation:** Dubai Mainland, UAE Free Zones, and Offshore licensing.
-2. **Corporate Structuring:** Holding companies, DIFC & ADGM Family Foundations, and Family Offices.
-3. **Tax & Accounting:** Corporate Tax registration/filings, VAT, bookkeeping, and Tax Residency Certificates.
-4. **Compliance:** AML/CFT frameworks, goAML system registration, and internal audit support.
-5. **Visas & Residency:** 10-Year Golden Visas, Investor/Partner visas, and employment quotas.
-6. **Ongoing Corporate Services:** License renewals, amendments, liquidation, and general administration.
+1. **Corporate Structuring & Company Formation:** Guidance on selecting the right structure and jurisdiction, setting up UAE mainland, free zone and offshore entities, and navigating establishment requirements.
+2. **Business Consulting with Country Tax Treaties:** Cross-border structures, Double Taxation Avoidance Agreements (DTAA), and treaty frameworks.
+3. **Feasibility Services:** Assessing business ideas, market potential, operational requirements, and suitable setup options.
+4. **Content Writing:** Professional business content writing for company profiles, websites, presentations, proposals, and corporate communication.
 
 ## Getting Started
 

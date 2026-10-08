@@ -1,87 +1,79 @@
 export interface AboutContent {
-  name: string;
-  role: string;
-  tagline: string;
-  introParagraphs: string[];
-  backgroundNarrative: {
+  brand: string;
+  intro: {
     headline: string;
-    subheadline: string;
-    paragraphs: string[];
+    lead: string;
   };
-  principles: {
-    title: string;
+  supportingEntrepreneurs: {
+    statement: string;
+    commitment: string;
+  };
+  hubCompany: {
+    overview: string;
+    synergy: string;
+  };
+  whoCanWorkWithMe: {
+    heading: string;
     description: string;
-  }[];
-  statItems: {
-    label: string;
-    value: string;
-    caption: string;
-  }[];
-  personalNote: {
+  };
+  aLittleMoreAboutMe: {
+    heading: string;
+    background: string;
     quote: string;
-    attribution: string;
+  };
+  letsConnect: {
+    heading: string;
+    connectionText: string;
+    linkedInPrompt: {
+      beforeLink: string;
+      linkText: string;
+      afterLink: string;
+      url: string;
+    };
   };
 }
 
 export const aboutData: AboutContent = {
-  name: "Mareena Tessa Thomas",
-  role: "Business Consultant — Corporate Structuring & Company Formation",
-  tagline: "Straight-talking guidance for ambitious entrepreneurs building in the UAE.",
-  introParagraphs: [
-    "Establishing a business in the United Arab Emirates is an extraordinary opportunity, but navigating the multitude of jurisdictions, legal frameworks, and regulatory filings can be overwhelming without clear, honest advice.",
-    "Mareena Tessa Thomas is an independent UAE business consultant specializing in Corporate Structuring and Company Formation. She works directly with ambitious individuals who have a clear vision and are committed to taking the next step, providing the structured clarity and personal attention needed to bring their ventures to life.",
-  ],
-  backgroundNarrative: {
-    headline: "Procedural precision meets human-centered understanding.",
-    subheadline: "A unique blend of journalism, social advocacy, and 12+ years of UAE business experience.",
-    paragraphs: [
-      "Mareena has lived in the United Arab Emirates for over 12 years. Over this decade-plus journey, she has witnessed the remarkable evolution of the nation's commercial laws, the expansion of world-class free zones, and the introduction of transformative tax and compliance systems.",
-      "Her professional foundation originates in Journalism and Social Work from India. This dual background provides an uncommon perspective in the corporate consulting sector: journalism instilled an investigative rigor, an insistence on absolute clarity, and the ability to dissect complex legal directives into clear, actionable steps. Meanwhile, her background in social work established an innate empathy for the human journey.",
-      "Starting a business is rarely just a transaction—it is a deeply personal, often stressful milestone involving dreams, capital, and family relocation. By understanding both the procedural technicalities and the emotional weight of starting up, Mareena ensures every client feels supported, informed, and in control at every stage.",
-    ],
+  brand: "Ask Mareena",
+  intro: {
+    headline:
+      "Hi, I’m Mareena Tessa Thomas – a straight-talking Business Consultant specializing in Corporate Structuring & Company Formation in the UAE.",
+    lead:
+      "I work with ambitious individuals who are ready to move forward but need that first guiding hand to set up their business here. Helping people turn their ideas into reality is not just my profession – it’s my passion.",
   },
-  principles: [
-    {
-      title: "Straight-Talking Clarity",
-      description:
-        "No bureaucratic jargon, hidden caveats, or false promises. You receive transparent, objective advice on what structure genuinely serves your business model.",
-    },
-    {
-      title: "Personal Guidance",
-      description:
-        "You deal directly with Mareena rather than being passed between anonymous account managers. Your business is treated with personal care and high attention to detail.",
-    },
-    {
-      title: "Friction & Stress Reduction",
-      description:
-        "Government paperwork, notarization, and banking coordination can consume valuable founder energy. Mareena handles the coordination so you can focus on building.",
-    },
-    {
-      title: "Long-Term Structuring",
-      description:
-        "A business setup should not only work on Day 1—it must protect your assets, withstand regulatory scrutiny, and accommodate future investment or succession.",
-    },
-  ],
-  statItems: [
-    {
-      value: "12+",
-      label: "Years in UAE",
-      caption: "In-depth practical experience across UAE business and regulatory changes.",
-    },
-    {
-      value: "6",
-      label: "Core Service Pillars",
-      caption: "From initial formation and structuring to corporate tax and long-term maintenance.",
-    },
-    {
-      value: "1-on-1",
-      label: "Direct Consultation",
-      caption: "Bespoke personal advisory without anonymous intermediary layers.",
-    },
-  ],
-  personalNote: {
+  supportingEntrepreneurs: {
+    statement:
+      "I love supporting entrepreneurs who have a clear vision and are committed to achieving their goals.",
+    commitment:
+      "Whether it’s guiding them through the legal and procedural steps or helping them structure their business for success, I’m here to make the process smooth, practical, and stress-free.",
+  },
+  hubCompany: {
+    overview:
+      "I am also the Founder of 360° HUB L.L.C., UAE, a business consultancy providing the same core services I personally specialize in, including company formation, corporate structuring, tax and compliance, accounting and bookkeeping, AML support, residency and visa services, and ongoing corporate support.",
+    synergy:
+      "Through Ask Mareena and 360° HUB, I bring together personal guidance and practical business expertise to support entrepreneurs throughout their UAE business journey.",
+  },
+  whoCanWorkWithMe: {
+    heading: "Who can work with me?",
+    description:
+      "Anyone looking to open a business in the UAE or seeking expert consultation on company formation and corporate structuring. If you have a solid business idea and are ready to take the next step, I can help you make it happen.",
+  },
+  aLittleMoreAboutMe: {
+    heading: "A little more about me…",
+    background:
+      "I have been living in the UAE for the past 12 years, bringing with me a background in Journalism and Social Work from India. This unique combination allows me to not only understand the technical aspects of business formation but also the emotional journey behind starting a business.",
     quote:
-      "When someone decides to launch a company in the UAE, they are putting their ambition and future on the line. My mission is to give them straight answers, remove the anxiety of the unknown, and structure their venture for lasting stability.",
-    attribution: "Mareena Tessa Thomas",
+      "For many entrepreneurs, their business is like their baby – and I treat it with the care, attention, and guidance it deserves.",
+  },
+  letsConnect: {
+    heading: "Let’s Connect",
+    connectionText:
+      "I believe in the power of connection and collaboration. If you’re looking for someone who combines professional expertise with a proactive, solutions-oriented mindset, let’s explore how we can work together.",
+    linkedInPrompt: {
+      beforeLink: "You can also learn more about my experience and professional insights on ",
+      linkText: "LinkedIn",
+      afterLink: ".",
+      url: "https://www.linkedin.com/in/mareena-tessa-thomas/",
+    },
   },
 };

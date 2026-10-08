@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Syne, Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { constructMetadata } from "@/lib/seo/metadata";
 import { generateOrganizationSchema, generatePersonSchema } from "@/lib/seo/schema";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const playfair = Playfair_Display({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-syne",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = constructMetadata({
@@ -36,7 +43,7 @@ export default function RootLayout({
   const personSchema = generatePersonSchema();
 
   return (
-    <html lang="en" className={`${playfair.variable} ${jakarta.variable} antialiased`}>
+    <html lang="en" className={`${syne.variable} ${sora.variable} ${inter.variable} antialiased`}>
       <head>
         <script
           type="application/ld+json"

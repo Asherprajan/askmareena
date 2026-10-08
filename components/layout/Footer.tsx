@@ -18,12 +18,12 @@ export default function Footer() {
               className="inline-flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-[#B8976C] rounded-sm"
               aria-label="Ask Mareena - Home"
             >
-              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white/10 p-1 flex items-center justify-center border border-white/20">
+              <div className="relative w-12 h-12 shrink-0">
                 <Image
-                  src="/images/brand/logo-white.png"
-                  alt="Ask Mareena Emblem"
-                  width={36}
-                  height={36}
+                  src="/images/logo.png"
+                  alt="Ask Mareena Logo"
+                  fill
+                  sizes="48px"
                   className="object-contain"
                 />
               </div>
@@ -152,10 +152,10 @@ export default function Footer() {
                 askmareena@gmail.com
               </a>
               <a
-                href="tel:+971542658225"
+                href="tel:+971525839925"
                 className="hover:text-white transition-colors block"
               >
-                +971 54 265 8225
+                +971 52 583 9925
               </a>
             </div>
             <div className="pt-1">
@@ -163,7 +163,7 @@ export default function Footer() {
                 href="/contact"
                 className="inline-block text-xs uppercase tracking-wider font-semibold py-2.5 px-4 bg-[#EAE6DF] text-[#080A0C] hover:bg-white transition-colors rounded-xs text-center"
               >
-                Ask Mareena
+                Get in Touch
               </Link>
             </div>
           </div>
@@ -171,12 +171,10 @@ export default function Footer() {
 
         {/* Regulatory Disclaimer & Legal Bottom */}
         <div className="pt-8 space-y-6">
-          <p className="text-xs text-[#8E99A8] leading-relaxed max-w-4xl">
-            <strong className="text-white font-medium">Regulatory Notice:</strong> Services are subject to competent authority requirements, eligibility criteria, applicable UAE legislation, and official government approvals. Fees, capital requirements, and timelines vary by case. The information presented on this website is for general educational and informational purposes and does not constitute regulated legal, judicial, or certified tax advice.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-[#8E99A8]">
-            <p>© {currentYear} Ask Mareena. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#8E99A8]">
+            <span className="text-[#C5CCD6] font-medium tracking-wide">
+              Clarity • Compliance • Smart Strategies
+            </span>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy-policy"
@@ -188,9 +186,14 @@ export default function Footer() {
                 href="/terms"
                 className="hover:text-[#A3ABB5] transition-colors focus-visible:outline-2 focus-visible:outline-[#B8976C] rounded-xs"
               >
-                Terms of Service & Disclaimer
+                Terms of Service &amp; Disclaimer
               </Link>
             </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-[#8E99A8]">
+            <p>© {currentYear} Ask Mareena. All rights reserved.</p>
+            <p>Mareena Tessa Thomas · UAE Business Consultant</p>
           </div>
         </div>
       </Container>

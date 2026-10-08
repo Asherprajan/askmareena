@@ -1,32 +1,32 @@
 import React from "react";
 import Link from "next/link";
-import { FileText, BarChart3, Users, Layers, ArrowRight } from "lucide-react";
+import { Building2, Globe2, Compass, PenLine, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const quickServices = [
   {
-    icon: FileText,
-    title: "Start a Company",
-    description: "Mainland, Free Zone and Offshore incorporation guidance.",
-    href: "/services/company-formation",
+    icon: Building2,
+    title: "Structuring & Formation",
+    description: "Mainland, Free Zone and offshore setup, and legal establishment.",
+    href: "/services/corporate-structuring-company-formation",
   },
   {
-    icon: BarChart3,
-    title: "Tax & Compliance",
-    description: "Corporate Tax, VAT, accounting, AML/goAML and related support.",
-    href: "/services/tax-accounting",
+    icon: Globe2,
+    title: "Tax Treaties Consulting",
+    description: "Cross-border arrangements and international tax treaty frameworks.",
+    href: "/services/tax-treaties-consulting",
   },
   {
-    icon: Users,
-    title: "Residency",
-    description: "Golden Visa, investor, partner and employment visa coordination.",
-    href: "/services/visas-residency",
+    icon: Compass,
+    title: "Feasibility Services",
+    description: "Market potential, operational requirements, and suitable setup options.",
+    href: "/services/feasibility-services",
   },
   {
-    icon: Layers,
-    title: "Structure & Grow",
-    description: "Corporate structures, holding companies, Family Foundations and ongoing services.",
-    href: "/services/corporate-structuring",
+    icon: PenLine,
+    title: "Content Writing",
+    description: "Company profiles, websites, proposals, and corporate messaging.",
+    href: "/services/content-writing",
   },
 ];
 
