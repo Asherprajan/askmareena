@@ -277,4 +277,96 @@ export const servicesData: ServiceDetail[] = [
       },
     ],
   },
+  {
+    slug: "golden-visa-assistance-support",
+    id: "05",
+    title: "Golden Visa Assistance & Support",
+    shortDescription:
+      "Professional guidance and end-to-end assistance for UAE Golden Visa applications across all eligible categories, helping individuals, investors, entrepreneurs, professionals, and families navigate the process smoothly and confidently.",
+    fullDescription:
+      "Secure your long-term future in the UAE with dedicated, end-to-end Golden Visa guidance. Mareena provides professional guidance and end-to-end assistance for UAE Golden Visa applications across all eligible categories, helping individuals, investors, entrepreneurs, professionals, and families navigate the process smoothly and confidently. From initial eligibility assessment and dossier compilation to government approvals, VIP medical testing, and family sponsorship, we handle every milestone with precision and transparency.",
+    scopeItems: [
+      "Comprehensive Golden Visa eligibility assessment across all active UAE regulatory routes",
+      "Assistance across all UAE Golden Visa categories (Property Investors, Entrepreneurs, Specialized Talents, Executive Professionals, and Outstanding Students)",
+      "Meticulous documentation review, translation advisory, and application dossier compilation",
+      "Government approval liaising and proactive follow-up with ICP and Dubai GDRFA authorities",
+      "VIP medical fitness test appointment and Emirates ID biometric coordination",
+      "Family sponsorship and dependent visa assistance for spouses, children of any age, and parents",
+      "Visa status amendment, in-country adjustment, or transition from existing corporate/employment visas",
+    ],
+    subServices: [
+      {
+        title: "Golden Visa Eligibility Assessment",
+        description:
+          "Pre-screening of your credentials, investment assets, or professional qualifications against the latest ICP and GDRFA qualification benchmarks.",
+      },
+      {
+        title: "Assistance Across All UAE Golden Visa Categories",
+        description:
+          "Tailored guidance for real estate investors (AED 2M+), entrepreneurs, senior executives (AED 30k+ salary), healthcare experts, engineers, and creatives.",
+      },
+      {
+        title: "Documentation & Application Processing Support",
+        description:
+          "Rigorous verification of property title deeds, bank statements, Ministry of Education equivalency letters, and attested qualification certificates.",
+      },
+      {
+        title: "Government Approval & Application Follow-up",
+        description:
+          "Direct administrative tracking, authority coordination, and swift resolution of any additional information requests from immigration departments.",
+      },
+      {
+        title: "Medical Fitness & Emirates ID Coordination",
+        description:
+          "Seamless scheduling for express medical screenings and biometric appointments to finalize your Emirates ID without unnecessary delays.",
+      },
+      {
+        title: "Family Sponsorship & Dependent Visa Assistance",
+        description:
+          "Turnkey visa processing for family dependents, extending 10-year residency security to your spouse, children, and parents under your sponsorship.",
+      },
+    ],
+    targetAudience: [
+      "Property investors with UAE real estate holdings valued at AED 2,000,000 or more",
+      "Senior executives, managers, and specialized professionals earning AED 30,000+ monthly with accredited degrees",
+      "Entrepreneurs, business owners, and startup founders with accredited commercial enterprises",
+      "Doctors, engineers, researchers, and creative talents seeking independent 10-year residency",
+      "Families seeking long-term UAE residency security without relying on corporate employment sponsorship",
+    ],
+    engagementSteps: [
+      "Eligibility review: Evaluating your background, salary, property investments, or creative/scientific credentials",
+      "Dossier preparation: Assembling, translating, and verifying mandatory certificates, bank statements, and attestations",
+      "Nomination submission: Filing the initial nomination with ICP or Dubai GDRFA channels for preliminary clearance",
+      "Entry permit & medicals: Securing the entry permit, coordinating fast-track medical fitness exams and biometric captures",
+      "Residency issuance & family sponsorship: Finalizing the 10-year Golden Visa residency sticker/ID and onboarding family dependents",
+    ],
+    importantConsiderations: [
+      "UAE Golden Visa approvals and category eligibility guidelines are determined at the discretion of the Federal Authority for Identity, Citizenship, Customs and Port Security (ICP) and the General Directorate of Residency and Foreigners Affairs (GDRFA).",
+      "Salary criteria, educational degree equivalencies from the UAE Ministry of Education, and property valuation benchmarks must satisfy official standards.",
+      "Services represent professional business consultancy, documentation preparation, and administrative coordination; official government approvals cannot be guaranteed by any third party.",
+    ],
+    faqs: [
+      {
+        question: "What are the primary benefits of holding a UAE Golden Visa?",
+        answer:
+          "The UAE Golden Visa provides 10 years of self-sponsored residency without needing an employer or local national sponsor. It allows you to stay outside the UAE for more than 6 months without your residency becoming invalid, sponsor family members (including spouses and children of any age), sponsor unlimited domestic staff, and enjoy long-term stability in the Emirates.",
+      },
+      {
+        question: "Can real estate investors qualify with mortgaged or off-plan properties?",
+        answer:
+          "Yes, provided the total property value meets or exceeds AED 2,000,000 and the equity paid satisfies current Dubai Land Department (DLD) or relevant emirate land registry criteria. Specific bank letters and NOCs may be required for mortgaged assets.",
+      },
+      {
+        question: "What are the requirements for skilled professionals under the Golden Visa?",
+        answer:
+          "Professionals generally require a valid UAE employment contract, a job classification within MOHRE Skill Level 1 or 2, a minimum monthly salary of AED 30,000, a bachelor's degree (or higher) with UAE Ministry of Education equivalency, and 6 months of bank statements.",
+      },
+      {
+        question: "Can I sponsor my spouse, children, and parents?",
+        answer:
+          "Yes. A primary Golden Visa holder can sponsor their spouse and children regardless of age, as well as their parents for a 10-year renewable residency. Furthermore, in the event of the primary visa holder passing away, family members are permitted to remain on their Golden Visa until the end of its duration.",
+      },
+    ],
+  },
 ];
+

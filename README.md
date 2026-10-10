@@ -17,6 +17,7 @@ Official website for **Ask Mareena** ([askmareena.com](https://askmareena.com)) 
 2. **Business Consulting with Country Tax Treaties:** Cross-border structures, Double Taxation Avoidance Agreements (DTAA), and treaty frameworks.
 3. **Feasibility Services:** Assessing business ideas, market potential, operational requirements, and suitable setup options.
 4. **Content Writing:** Professional business content writing for company profiles, websites, presentations, proposals, and corporate communication.
+5. **Golden Visa Assistance & Support:** Professional guidance and end-to-end processing across all eligible UAE Golden Visa categories for investors, entrepreneurs, professionals, and families.
 
 ## Getting Started
 

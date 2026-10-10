@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function VisasResidencyPage() {
-  redirect("/services");
+  redirect("/services/golden-visa-assistance-support");
 }

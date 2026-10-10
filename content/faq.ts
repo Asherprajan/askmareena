@@ -11,7 +11,7 @@ export const faqData: FAQItem[] = [
     category: "General",
     question: "What does Ask Mareena do?",
     answer:
-      "Ask Mareena provides practical, straightforward business consultancy across four core areas: Corporate Structuring & Company Formation (Mainland, Free Zones, Offshore, and governance architecture), Business Consulting with Country Tax Treaties (cross-border structures, DTAA analysis, and TRCs), Feasibility Services (evaluating business ideas, market potential, and operational requirements), and Content Writing (company profiles, websites, presentations, and corporate communications).",
+      "Ask Mareena provides practical, straightforward business consultancy across key areas: Corporate Structuring & Company Formation (Mainland, Free Zones, Offshore, and governance architecture), Business Consulting with Country Tax Treaties (cross-border structures, DTAA analysis, and TRCs), Feasibility Services (evaluating business ideas, market potential, and operational requirements), Content Writing (company profiles, websites, presentations, and corporate communications), and Golden Visa Assistance & Support (end-to-end guidance across all eligible UAE Golden Visa categories).",
   },
   {
     id: "faq-2",

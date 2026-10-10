@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const SITE_URL = "https://askmareena.com";
 const SITE_NAME = "Ask Mareena";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/images/brand/03_Silver_on_Black.png`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface MetadataProps {
   title: string;
@@ -45,6 +45,13 @@ export function constructMetadata({
     creator: "Mareena Tessa Thomas",
     publisher: SITE_NAME,
     metadataBase: new URL(SITE_URL),
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     alternates: {
       canonical: url,
     },

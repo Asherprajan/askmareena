@@ -25,6 +25,7 @@ const serviceOptions = [
   "Business Consulting with Tax Treaties",
   "Feasibility Services",
   "Content Writing",
+  "Golden Visa Assistance & Support",
   "Other Consultation",
 ];
 

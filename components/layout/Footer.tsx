@@ -36,6 +36,25 @@ export default function Footer() {
               Straight-talking UAE business consultancy by Mareena Tessa Thomas. Providing personal guidance in Corporate Structuring, Company Formation, Tax, Compliance, and Residency.
             </p>
 
+            {/* Powered By Affiliation */}
+            <div>
+              <a
+                href="https://www.360degreehub.ae/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-[#C5A880]/50 hover:bg-white/10 text-xs text-[#C5CCD6] transition-all group"
+                aria-label="Powered by 360 Degree Hub (opens in new tab)"
+              >
+                <span className="text-[#8E99A8]">Powered by</span>
+                <span className="font-semibold text-white group-hover:text-[#C5A880] transition-colors">
+                  360° Degree Hub
+                </span>
+                <span className="text-[#8E99A8] group-hover:text-[#C5A880] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  ↗
+                </span>
+              </a>
+            </div>
+
             {/* Approved Social Links */}
             <div className="pt-2">
               <span className="text-xs uppercase tracking-[0.14em] text-[#7A8291] font-medium block mb-3">
@@ -191,8 +210,23 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-[#8E99A8]">
-            <p>© {currentYear} Ask Mareena. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-[#8E99A8]">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <p>© {currentYear} Ask Mareena. All rights reserved.</p>
+              <span className="hidden sm:inline text-white/20">•</span>
+              <p className="flex items-center gap-1.5">
+                <span>Powered by</span>
+                <a
+                  href="https://www.360degreehub.ae/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-[#C5CCD6] hover:text-[#C5A880] underline underline-offset-4 decoration-white/20 hover:decoration-[#C5A880] transition-colors inline-flex items-center gap-1"
+                >
+                  360° Degree Hub
+                  <span className="text-[10px]">↗</span>
+                </a>
+              </p>
+            </div>
             <p>Mareena Tessa Thomas · UAE Business Consultant</p>
           </div>
         </div>

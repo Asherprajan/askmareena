@@ -263,7 +263,7 @@ export default function ServiceDetailLayout({ service }: ServiceDetailLayoutProp
               href="/services"
               className="text-xs uppercase tracking-wider font-medium text-white hover:text-[#EAE6DF] transition-colors"
             >
-              View all 6 services
+              View all {servicesData.length} services
             </Link>
           </div>
 

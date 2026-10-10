@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Building2, Globe2, Compass, PenLine, ArrowRight } from "lucide-react";
+import { Building2, Globe2, Compass, PenLine, Award } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const quickServices = [
@@ -28,6 +28,12 @@ const quickServices = [
     description: "Company profiles, websites, proposals, and corporate messaging.",
     href: "/services/content-writing",
   },
+  {
+    icon: Award,
+    title: "Golden Visa Support",
+    description: "End-to-end processing across all eligible UAE Golden Visa categories.",
+    href: "/services/golden-visa-assistance-support",
+  },
 ];
 
 export default function QuickServicesReference() {
@@ -44,8 +50,8 @@ export default function QuickServicesReference() {
           </h2>
         </div>
 
-        {/* 4 Cards Row matching reference */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        {/* 5 Cards Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
           {quickServices.map((item) => {
             const Icon = item.icon;
             return (
